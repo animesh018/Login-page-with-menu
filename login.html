@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Login Test  -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login with Menu</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Home</a>
+          <a href="#">About </a>
+          <a href="#">Contact </a>
+          <a href="#">Blog </a>
+        </div>
+      </div>
+      <div class="container">
+         <header>Sign In</header>
+         <div class="signup">
+            Dont have an account? <a href="#">Get Started</a>
+         </div>
+         <form>
+            <div class="input-field">
+               <input type="text" required>
+               <label>Email or Username</label>
+            </div>
+            <div class="input-field">
+               <input class="pswrd" type="password" required>
+               <label>Password</label>
+            </div>
+            <div class="button">
+               <div class="inner"></div>
+               <button>LOGIN</button>
+            </div>
+         </form>
+
+      <!-- JS for Menu   -->
+
+         <script>
+           
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn')) {
+              var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                  myDropdown.classList.remove('show');
+                }
+              }
+            }
+            </script>
+
+   </body>
+</html>
